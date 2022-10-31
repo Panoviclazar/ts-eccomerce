@@ -2,44 +2,9 @@ import {useState} from 'react'
 
 type CheckoutProp = {
   isCheckoutOpen: boolean
-  event: string
 };
 
 export function Checkout({ isCheckoutOpen }: CheckoutProp) {
-
-  const [fnmessage, setFnmessage] = useState('')
-  const [lnmessage, setLnmessage] = useState('')
-  const [emessage, setEmessage] = useState('')
-  const [nmessage, setNmessage] = useState('')
-  const [amessage, setAmessage] = useState('')
-
-  const handleChangeFn = (event) => {
-    setFnmessage(event.target.value);
-  };
-  const handleChangeLn = (event) => {
-    setLnmessage(event.target.value);
-  };
-  const handleChangeE = (event) => {
-    setEmessage(event.target.value);
-  };
-  const handleChangeN = (event) => {
-    setNmessage(event.target.value);
-  };
-  const handleChangeA = (event) => {
-    setAmessage(event.target.value);
-  };
-
-  const checkoutValid = () => {
-    if(fnmessage && lnmessage && emessage && nmessage && amessage){
-      window.location.reload(false);
-    } else{
-      const checkoutBtn = document.querySelector('.checkout-button')
-      checkoutBtn.style.backgroundColor = "#e63946";
-      setTimeout(() => {
-      checkoutBtn.style.backgroundColor = "#2a9d8f";
-      }, 250)
-    }
-  }
 
   return (
     <div>
@@ -84,8 +49,6 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
                 className="first-name"
                 type="text"
                 name="name"
-                onChange={handleChangeFn}
-                value={fnmessage}
               />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -94,8 +57,6 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
                 className="last-name"
                 type="text"
                 name="name"
-                onChange={handleChangeLn}
-                value={lnmessage}
               />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -104,8 +65,6 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
                 className="email"
                 type="email"
                 name="name"
-                onChange={handleChangeE}
-                value={emessage}
               />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -114,8 +73,6 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
                 className="number"
                 type="text"
                 name="name"
-                onChange={handleChangeN}
-                value={nmessage}
               />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -124,12 +81,9 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
                 className="adress"
                 type="text"
                 name="name"
-                onChange={handleChangeA}
-                value={amessage}
               />
             </div>
-            <div
-              onClick={checkoutValid}
+            <button
               className="checkout-button"
               style={{
                 height: "40px",
@@ -145,7 +99,7 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
               }}
             >
               Proceed
-            </div>
+            </button>
           </form>
         </div>
       )}

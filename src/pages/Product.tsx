@@ -7,11 +7,7 @@ import {
 import { useParams } from "react-router-dom";
 import {Products} from '../components/Products'
 
-type idProps = {
-  id: number;
-};
-
-export function Product({ id }: idProps) {
+export function Product() {
   var { id } = useParams();
   var item = items.filter((item) => item.id === Number(id));
 
