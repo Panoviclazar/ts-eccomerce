@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Earbuds Lite",
+    "price": 49,
+    "imgUrl": "/imgs/earphones1.webp",
+    "details": "Confortable in-ear earbuds, exelent noise reduction",
+    "stars" : 18
+  },
+  {
+    "id": 2,
+    "name": "Wireless Headphones",
+    "price": 69,
+    "imgUrl": "/imgs/earphones2.webp",
+    "details": "Very high-quality headphones, 16 hours of music without charging",
+    "stars" : 25
+  },
+  {
+    "id": 3,
+    "name": "Wireless Earphones",
+    "price": 59,
+    "imgUrl": "/imgs/earphones3.webp",
+    "details": "Very practical headphones, support fast charging",
+    "stars": 10
+  },
+  {
+    "id": 4,
+    "name": "Gaming Headphones",
+    "price": 79,
+    "imgUrl": "/imgs/earphones4.webp",
+    "details": "Experience an incredible gaming feeling",
+    "stars": 33
+  },
+  {
+    "id": 5,
+    "name": "Headphones",
+    "price": 79,
+    "imgUrl": "/imgs/earphones5.webp",
+    "details": "Elegant headphones with excellent sound",
+    "stars": 41
+  },
+  {
+    "id": 6,
+    "name": "Wireless Speaker",
+    "price": 89,
+    "imgUrl": "/imgs/speaker.webp",
+    "details": "The best bass on the market, with cool led lights",
+    "stars": 20
+  },
+  {
+    "id": 7,
+    "name": "IWatch",
+    "price": 199,
+    "imgUrl": "/imgs/watch.webp",
+    "details": "Well designed smart watch with all cool gadgets",
+    "stars": 32
+  },
+  {
+    "id": 8,
+    "name": "IWatch Pro",
+    "price": 299,
+    "imgUrl": "/imgs/watch2.webp",
+    "details": "A latest technology watch, with newest smart functions",
+    "stars": 102
+  }
+]

@@ -1,0 +1,30 @@
+.product-container{
+  background-color: #e9ecef;
+}
+.product-container:hover{
+  scale: 1.05;
+  transition: 0.5s ease-in-out;
+  background-color: #ffc300;
+}
+.product-details-container{
+  background: #e9ecef;
+}
+.product-details-container:hover{
+  background: #ba181b;
+  transition: 0.7s;
+}
+.add-to-cart-button{
+  background-color: #118ab2;
+  color: white;
+  border: none;
+}
+.add-to-cart-button:active{
+  scale: 0.90;
+}
+.checkout-button{
+  cursor: pointer;
+  background-color: #2a9d8f;
+}
+.checkout-button:active{
+  scale: 0.95;
+}
