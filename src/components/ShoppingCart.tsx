@@ -43,7 +43,7 @@ export function ShoppingCart( { isOpen }: ShopingCartProp ){
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              overflowX: 'auto'
+              overflowX: "auto",
             }}
           >
             <div
@@ -95,7 +95,19 @@ export function ShoppingCart( { isOpen }: ShopingCartProp ){
                 return total + (item?.price || 0) * cartItem.quantity;
               }, 0)}
             </p>
-            <button onClick={openCheckout} style={{ border: "none", backgroundColor: "#d62828" , padding: '15px 65px', fontSize:'20px', fontFamily: 'monospace', marginTop: '30px', color: 'white', borderRadius: '10px'}}>
+            <button
+              onClick={openCheckout}
+              style={{
+                border: "none",
+                backgroundColor: "#d62828",
+                padding: "15px 65px",
+                fontSize: "20px",
+                fontFamily: "monospace",
+                marginTop: "30px",
+                color: "white",
+                borderRadius: "10px",
+              }}
+            >
               Buy
             </button>
           </div>

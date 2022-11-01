@@ -1,6 +1,7 @@
 import {AiOutlineClose} from 'react-icons/ai'
 import { CartItem } from './CartItem';
 import {useShoppingCart} from '../context/ShoppingCartContext'
+import allItems from "../data/items.json"
 
 type CheckoutProp = {
   isCheckoutOpen: boolean
@@ -43,6 +44,10 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
               {cartItems.map((item) => (
                 <CartItem key={item.id} {...item} />
               ))}
+              <p style={{fontFamily: 'monospace', fontSize: '18px', alignSelf:'center'}}>Total:${cartItems.reduce((total, cartItem) => {
+                const item = allItems.find(i => i.id === cartItem.id)
+                return total + (item?.price || 0) * cartItem.quantity
+              }, 0)}</p>
             </div>
           )}
           <p

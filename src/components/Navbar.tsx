@@ -1,11 +1,10 @@
 import { AiOutlineShopping } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import {useState} from 'react'
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function Navbar() {
 
-  const {openCart, closeCart, cartQuantity} = useShoppingCart()
+  const {openCart, cartQuantity} = useShoppingCart()
 
   return (
     <div
