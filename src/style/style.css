@@ -52,7 +52,7 @@
   align-self: end;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1200px) {
   .black-friday {
     font-size: 55px;
     margin-left: 80px;
