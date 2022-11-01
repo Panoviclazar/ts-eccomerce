@@ -1,4 +1,6 @@
-import {useState} from 'react'
+import {AiOutlineClose} from 'react-icons/ai'
+import { CartItem } from './CartItem';
+import {useShoppingCart} from '../context/ShoppingCartContext'
 
 type CheckoutProp = {
   isCheckoutOpen: boolean
@@ -9,6 +11,8 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
   const pageReload = () => {
     window.location.reload()
   }
+
+  const { cartItems, closeCheckout } = useShoppingCart();
 
   return (
     <div>
@@ -25,6 +29,22 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
             placeContent: "center",
           }}
         >
+          {cartItems.length > 0 && (
+            <div
+              style={{
+                marginTop: "50px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                border: "1px solid grey",
+                padding: "3px 10px",
+              }}
+            >
+              {cartItems.map((item) => (
+                <CartItem key={item.id} {...item} />
+              ))}
+            </div>
+          )}
           <p
             style={{
               fontFamily: "monospace",
@@ -86,6 +106,7 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
               Proceed
             </div>
           </form>
+          <div onClick={closeCheckout} style={{position: 'absolute', right: '30px', top: '20px', fontSize:'20px'}}><AiOutlineClose/></div>
         </div>
       )}
     </div>

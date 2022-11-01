@@ -13,6 +13,7 @@ type CartItem = {
 
 type ShoppingCartContext = {
   openCheckout: () => void;
+  closeCheckout: () => void;
   openCart: () => void;
   closeCart: () => void;
   getItemQuantity: (id: number) => number;
@@ -38,6 +39,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   );
   
   const openCheckout = () => setIsCheckoutOpen(true);
+  const closeCheckout = () => setIsCheckoutOpen(false);
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
   function getItemQuantity(id: number) {
@@ -73,6 +75,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         removeFromCart,
         openCart,
         openCheckout,
+        closeCheckout,
         closeCart,
         cartItems,
         cartQuantity,
