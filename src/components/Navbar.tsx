@@ -14,7 +14,7 @@ export function Navbar() {
         alignItems: "center",
         justifyContent: "space-between",
         paddingInline: "10px",
-        marginBottom: "0px",
+        marginBottom: "20px",
         textAlign: 'center'
       }}
     >

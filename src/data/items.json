@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Earbuds",
-    "price": 49,
+    "price": 69,
     "imgUrl": "/imgs/earphones1.webp",
     "details": "Confortable in-ear earbuds, exelent noise reduction",
     "stars" : 18
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Headphones",
-    "price": 69,
+    "price": 89,
     "imgUrl": "/imgs/earphones2.webp",
     "details": "Very high-quality headphones, 16 hours of music without charging",
     "stars" : 25
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Gaming Heads",
-    "price": 79,
+    "price": 149,
     "imgUrl": "/imgs/earphones4.webp",
     "details": "Experience an incredible gaming feeling",
     "stars": 33
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "Headphones Pro",
-    "price": 79,
+    "price": 249,
     "imgUrl": "/imgs/earphones5.webp",
     "details": "Elegant headphones with excellent sound",
     "stars": 41
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "name": "Speaker",
-    "price": 89,
+    "price": 149,
     "imgUrl": "/imgs/speaker.webp",
     "details": "The best bass on the market, with cool led lights",
     "stars": 20
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "name": "IWatch",
-    "price": 199,
+    "price": 899,
     "imgUrl": "/imgs/watch.webp",
     "details": "Well designed smart watch with all cool gadgets",
     "stars": 32
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "name": "IWatch Pro",
-    "price": 299,
+    "price": 1119,
     "imgUrl": "/imgs/watch2.webp",
     "details": "A latest technology watch, with newest smart functions",
     "stars": 102
