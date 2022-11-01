@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Earbuds Lite",
+    "name": "Earbuds",
     "price": 49,
     "imgUrl": "/imgs/earphones1.webp",
     "details": "Confortable in-ear earbuds, exelent noise reduction",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "name": "Wireless Headphones",
+    "name": "Headphones",
     "price": 69,
     "imgUrl": "/imgs/earphones2.webp",
     "details": "Very high-quality headphones, 16 hours of music without charging",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "Wireless Earphones",
+    "name": "Earphones",
     "price": 59,
     "imgUrl": "/imgs/earphones3.webp",
     "details": "Very practical headphones, support fast charging",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "name": "Gaming Headphones",
+    "name": "Gaming Heads",
     "price": 79,
     "imgUrl": "/imgs/earphones4.webp",
     "details": "Experience an incredible gaming feeling",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "name": "Headphones",
+    "name": "Headphones Pro",
     "price": 79,
     "imgUrl": "/imgs/earphones5.webp",
     "details": "Elegant headphones with excellent sound",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "name": "Wireless Speaker",
+    "name": "Speaker",
     "price": 89,
     "imgUrl": "/imgs/speaker.webp",
     "details": "The best bass on the market, with cool led lights",

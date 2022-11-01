@@ -6,6 +6,10 @@ type CheckoutProp = {
 
 export function Checkout({ isCheckoutOpen }: CheckoutProp) {
 
+  const pageReload = () => {
+    window.location.reload()
+  }
+
   return (
     <div>
       {isCheckoutOpen && (
@@ -45,45 +49,26 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
           >
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <label>First Name:</label>
-              <input
-                className="first-name"
-                type="text"
-                name="name"
-              />
+              <input className="first-name" type="text" name="name" />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <label>Last Name:</label>
-              <input
-                className="last-name"
-                type="text"
-                name="name"
-              />
+              <input className="last-name" type="text" name="name" />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <label>Email:</label>
-              <input
-                className="email"
-                type="email"
-                name="name"
-              />
+              <input className="email" type="email" name="name" />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <label>Number:</label>
-              <input
-                className="number"
-                type="text"
-                name="name"
-              />
+              <input className="number" type="text" name="name" />
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <label>Adress:</label>
-              <input
-                className="adress"
-                type="text"
-                name="name"
-              />
+              <input className="adress" type="text" name="name" />
             </div>
-            <button
+            <div
+              onClick={pageReload}
               className="checkout-button"
               style={{
                 height: "40px",
@@ -99,7 +84,7 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
               }}
             >
               Proceed
-            </button>
+            </div>
           </form>
         </div>
       )}
