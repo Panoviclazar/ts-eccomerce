@@ -10,15 +10,11 @@ type ProductsProp = {
   stars: number
 }
 
-export function Products({id, name, price, imgUrl, details, stars}: ProductsProp) {
+export function Products({id, name, price, imgUrl}: ProductsProp) {
   
   const {
-    getItemQuantity,
     increaseCartQuantity,
-    removeFromCart,
   } = useShoppingCart();
-
-  const quantity = getItemQuantity(id)
 
   return (
     <div>

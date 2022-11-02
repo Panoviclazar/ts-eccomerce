@@ -81,35 +81,39 @@ export function ShoppingCart( { isOpen }: ShopingCartProp ){
                 <CartItem key={item.id} {...item} />
               ))}
             </div>
-            <p
-              style={{
-                fontSize: "20px",
-                marginTop: "20px",
-                fontFamily: "monospace",
-                color: "#001d3d",
-              }}
-            >
-              Total: $
-              {cartItems.reduce((total, cartItem) => {
-                const item = storeItems.find((i) => i.id === cartItem.id);
-                return total + (item?.price || 0) * cartItem.quantity;
-              }, 0)}
-            </p>
-            <button
-              onClick={openCheckout}
-              style={{
-                border: "none",
-                backgroundColor: "#d62828",
-                padding: "15px 65px",
-                fontSize: "20px",
-                fontFamily: "monospace",
-                marginTop: "30px",
-                color: "white",
-                borderRadius: "10px",
-              }}
-            >
-              Buy
-            </button>
+            {cartItems.length > 0 && (
+              <div>
+                <p
+                  style={{
+                    fontSize: "20px",
+                    marginTop: "20px",
+                    fontFamily: "monospace",
+                    color: "#001d3d",
+                  }}
+                >
+                  Total: $
+                  {cartItems.reduce((total, cartItem) => {
+                    const item = storeItems.find((i) => i.id === cartItem.id);
+                    return total + (item?.price || 0) * cartItem.quantity;
+                  }, 0)}
+                </p>
+                <button
+                  onClick={openCheckout}
+                  style={{
+                    border: "none",
+                    backgroundColor: "#d62828",
+                    padding: "15px 65px",
+                    fontSize: "20px",
+                    fontFamily: "monospace",
+                    marginTop: "30px",
+                    color: "white",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Buy
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}
