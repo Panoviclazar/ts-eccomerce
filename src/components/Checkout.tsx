@@ -2,6 +2,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 import { CartItem } from './CartItem';
 import {useShoppingCart} from '../context/ShoppingCartContext'
 import allItems from "../data/items.json"
+import {SetStateAction, useState} from 'react'
 
 type CheckoutProp = {
   isCheckoutOpen: boolean
@@ -9,11 +10,25 @@ type CheckoutProp = {
 
 export function Checkout({ isCheckoutOpen }: CheckoutProp) {
 
-  const pageReload = () => {
-    window.location.reload()
-  }
+  const [message, setMessage] = useState('');
+
+  const handleChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+    setMessage(event.target.value);
+  };
 
   const { cartItems, closeCheckout } = useShoppingCart();
+
+  const pageReload = () => {
+    if(message){
+      window.location.reload();
+    } else {
+      const checkoutBtn = document.querySelector(".checkout-button");
+      checkoutBtn?.classList.add("red-alert");
+      setTimeout(() => {
+        checkoutBtn?.classList.remove("red-alert");
+      }, 100)
+    }
+  };
 
   return (
     <div>
@@ -27,10 +42,10 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
             top: "0",
             right: "0",
             display: "flex",
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '30px',
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "30px",
             overflowY: "scroll",
           }}
         >
@@ -88,23 +103,53 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
             >
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <label>First Name:</label>
-                <input className="first-name" type="text" name="name" />
+                <input
+                  className="first-name"
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={message}
+                />
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <label>Last Name:</label>
-                <input className="last-name" type="text" name="name" />
+                <input
+                  className="last-name"
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={message}
+                />
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <label>Email:</label>
-                <input className="email" type="email" name="name" />
+                <input
+                  className="email"
+                  type="email"
+                  name="name"
+                  onChange={handleChange}
+                  value={message}
+                />
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <label>Number:</label>
-                <input className="number" type="text" name="name" />
+                <input
+                  className="number"
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={message}
+                />
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <label>Adress:</label>
-                <input className="adress" type="text" name="name" />
+                <input
+                  className="adress"
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={message}
+                />
               </div>
               <div
                 onClick={pageReload}

@@ -51,6 +51,10 @@
   font-size: 30px;
   align-self: end;
 }
+.red-alert{
+  background: darkred;
+  transform: translateY(20px)
+}
 
 @media only screen and (min-width: 1000px) {
   .black-friday {
