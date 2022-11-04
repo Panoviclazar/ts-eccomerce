@@ -78,7 +78,7 @@ export function ShoppingCart( { isOpen }: ShopingCartProp ){
               }}
             >
               {cartItems.map((item) => (
-                <CartItem key={item.id} {...item} />
+                <CartItem {...item} />
               ))}
             </div>
             {cartItems.length > 0 && (

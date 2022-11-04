@@ -61,7 +61,7 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
               }}
             >
               {cartItems.map((item) => (
-                <CartItem key={item.id} {...item} />
+                <CartItem {...item} />
               ))}
               <p
                 style={{
@@ -171,17 +171,17 @@ export function Checkout({ isCheckoutOpen }: CheckoutProp) {
               </div>
             </form>
           </div>
-          <div
-            onClick={closeCheckout}
-            style={{
-              position: "absolute",
-              right: "30px",
-              top: "20px",
-              fontSize: "20px",
-            }}
-          >
-            <AiOutlineClose />
-          </div>
+            <div
+              onClick={closeCheckout}
+              style={{
+                position: "absolute",
+                right: "30px",
+                top: "20px",
+                fontSize: "20px",
+              }}
+            >
+              <AiOutlineClose />
+            </div>
         </div>
       )}
     </div>
